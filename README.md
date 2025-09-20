@@ -1,6 +1,7 @@
 # Dragon Fight
 
 A side-scrolling beat 'em up game inspired by classic titles like Double Dragon. Players control one or two fighters battling through stages filled with enemies, using punches, kicks, and jumps to progress.
+<img width="788" height="591" alt="{91995DB2-0EFA-40F8-834C-BA1CE8A01E98}" src="https://github.com/user-attachments/assets/9af69a23-bfae-40e1-8cdd-34e1aab64f8a" />
 
 ## Built With
 
